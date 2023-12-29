@@ -13,4 +13,6 @@ import { ContainerComponent } from './components/container/container.component';
 })
 export class AppComponent {
   title = 'resumeai';
+
+  //Ok
 }

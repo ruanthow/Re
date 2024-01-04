@@ -1,1 +1,7 @@
-<p class="bg-gray-700">button works!</p>
+<div class="buttonContainer">
+    <div  class="button" (click)="onClick($event.currentTarget)">
+        <p>
+            <ng-content></ng-content>
+        </p>
+    </div>
+</div>

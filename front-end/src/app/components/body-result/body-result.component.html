@@ -1,0 +1,47 @@
+<main class="containerBody">
+    <p class="resultTitle">Resultado</p>
+    <div class="containerArea">
+        <div class="containerResult">
+            <p>Resumo Transcrito</p>
+
+            <div class="iconCopy">
+                <span #idInfoCopy class="infoCopy">{{infoCopy}}</span>
+                <fa-icon class="iconSVG fa-1x" [icon]="faCopy" (click)="copyText()"></fa-icon>
+            </div>
+            <div class="result">
+
+                <p #pHTML>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti, vel assumenda mollitia
+                    quibusdam dolore harum iusto culpa tenetur, officiis temporibus sequi consequatur! At laudantium
+                    dolores blanditiis mollitia minus eveniet vero. Lorem, ipsum dolor sit amet consectetur adipisicing
+                    elit. Eligendi deleniti debitis sint officiis corrupti. Repellendus, odit obcaecati? Distinctio
+                    eligendi, aspernatur eum, ipsam deleniti at saepe, voluptates veritatis sed unde necessitatibus.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt recusandae quasi nihil saepe aut error
+                    odit rem rerum voluptate iste, quidem praesentium sint expedita consequatur ut sed obcaecati
+                    laboriosam eos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil dolore sapiente animi
+                    ut alias! Consequatur, eveniet ea quia placeat reprehenderit ad possimus ut. Mollitia voluptatibus
+                    quisquam suscipit eos ut dicta. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam
+                    nemo voluptate, dolor placeat dolorem quia enim vel quo saepe praesentium. Perspiciatis error
+                    facilis aliquam delectus, accusamus aliquid adipisci fugiat sed! Lorem ipsum dolor sit amet
+                    consectetur adipisicing elit. Rem delectus error perspiciatis praesentium laboriosam ut quaerat a,
+                    non rerum iusto corporis quo, minus dolores? Ad fugit molestiae sint laboriosam non?</p>
+            </div>
+        </div>
+        <div class="areaAudio">
+            <p>Audio Resumido</p>
+            <div>
+                <audio controls>
+                    <source src="" type="audio/mp3">
+
+                    Your browser does not support the audio element.
+                </audio>
+                <a href="" download="./body-result.component.html">
+                    <div class="iconDowloand">
+                        <fa-icon class="iconCloud fa-4x" [icon]="faCloud"></fa-icon>
+                    </div>
+                </a>
+                <p>Clique aqui para fazer download!</p>
+
+            </div>
+        </div>
+    </div>
+</main>

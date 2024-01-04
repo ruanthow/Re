@@ -1,0 +1,87 @@
+:host{
+    @apply flex justify-center;
+   
+}
+
+.containerBody {
+   @apply max-h-[85vh] max-w-[1000px] mb-1;
+
+    .resultTitle{
+        @apply text-[20pt] font-bold my-[0.5rem] tablet:ml-[1rem];
+    }
+    .containerArea {
+        
+        @apply flex flex-row w-[100%] h-[85%];
+
+        .containerResult {
+            @apply h-[100%] w-[100%] border border-[rgba(0,0,0,0.151)] mr-[1rem] rounded-[0.5rem] p-[1.5rem] tablet:m-[2rem];
+            
+            &>p:first-child{
+               border-bottom: 1px solid rgba(0,0,0,0.151);
+               margin-bottom: .5rem
+            }
+
+            .result{
+               @apply border border-[rgba(0,0,0,0.151)] flex h-[75%] flex-col overflow-y-scroll w-[100%];
+                
+                &>p{
+                    @apply p-[1rem];
+                }
+            }
+
+            .iconCopy{
+                @apply flex justify-end items-center m-[0.7rem];
+                
+                @keyframes infoCopy {
+                    0%{
+                        opacity: 1;
+                    }
+                    100%{
+                        opacity: 0;
+                    }
+                }
+
+                .infoCopy{
+                    @apply opacity-[1] m-[0.5rem];
+            
+                }
+
+                .infoCopyEffect{
+                    animation: infoCopy 2s;
+                    @apply opacity-0;
+                }
+
+                .iconSVG{
+                    @apply border border-[rgba(0,0,0,0.151)] rounded-[10%] p-[0.5rem];
+
+                    &:hover{
+                        @apply bg-[rgb(0,0,0,0.151)];
+                    }
+                }
+
+                
+            }
+        }
+
+
+        .areaAudio {
+            @apply h-[100%] w-[100%];
+
+            &>p{
+                @apply mb-[3rem] font-semibold text-lg
+            }
+            
+            .iconDowloand{
+                @apply mt-8 animate-bounce flex items-center flex-col desktop:w-[70%] laptop:w-[70%] tablet:w-[100%]  ;
+
+                .iconCloud{
+                    color: rgb(115, 196, 250);
+                }
+            }
+
+            &>div>p{
+                @apply ml-11 text-sm
+            }
+        }
+    }
+}

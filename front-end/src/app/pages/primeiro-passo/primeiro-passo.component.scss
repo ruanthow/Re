@@ -1,0 +1,18 @@
+.my-select {
+    position: relative;
+}
+
+
+.default-style {
+    @apply border-b-2 border-gray-500 py-2 px-1 outline-none text-sm laptop:text-base w-full bg-transparent font-semibold text-gray-400 uppercase;
+}
+
+
+.teste {
+    @apply relative overflow-hidden;
+
+    .input-label {
+        @apply absolute;
+    }
+
+}

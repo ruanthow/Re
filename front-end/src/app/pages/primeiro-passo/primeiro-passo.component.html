@@ -1,0 +1,41 @@
+<app-container>
+    <div class="flex flex-row gap-x-4">
+        <app-step-button active />
+        <app-step-button />
+        <app-step-button />
+    </div>
+    <div class="w-full h-full py-4 laptop:px-0 tablet:px-10 tablet:items-stretch flex flex-col items-center">
+        <div>
+            <h2 class="font-semibold text-2xl laptop:text-4xl">Upload my video</h2>
+            <p class="text-gray-400 text-sm mt-2">Fill in the data for profile. It will take a couple of minutes.
+                You only need a passport</p>
+        </div>
+        <form class="flex tablet:flex-row flex-col">
+            <aside class="border rounded-lg p-8 my-8 h-[450px] w-[300px] laptop:h-[650px] tablet:w-[600px] gap-8 laptop:gap-16 flex flex-col" >
+                <div>
+                    <p class="font-bold text-lg">Infos</p>
+                    <p class="font-ligth text-xs">Indicate the desired communication method</p>
+                </div>
+                <my-input label="titulo" type="text" id="titulo" />
+                <div class="my-select">
+                    <select class="default-style appearance-none">
+                        <option value="" selected disabled hidden>Linguagem</option>
+                        <option>Português</option>6
+                        <option>Alemão</option>
+                        <option>Japones</option>
+                        <option>Chines</option>
+                    </select>
+                </div>
+                <my-textarea id="descricao" placeholder="descrição" max-height="150px" style="width: 100%;"/>
+            </aside>
+            <aside class="flex w-full justify-center items-center">
+                <label for="video" class="border-dashed border-2 rounded-[24px] w-[320px] h-[250px] laptop:w-[420px] laptop:h-[350px] text-gray-400 relative flex items-center justify-center">
+                    
+                    <video src=""  class="pointer-events-none absolute inset-0 hidden rounded-[24px] w-full h-full object-fill" #previewVideo></video>
+                    Clique e adicione seu video
+                </label>
+                <input type="file" accept="video/*" id="video" (change)="teste($event)" hidden />
+            </aside>
+        </form>
+    </div>
+</app-container>

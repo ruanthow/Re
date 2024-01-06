@@ -1,0 +1,39 @@
+:host {
+    @apply block relative w-full;
+
+    textarea {
+        @apply relative w-full resize-none h-full px-1 py-2 leading-4 overflow-hidden outline-none rounded-lg transition-colors duration-200 ease-in font-semibold text-gray-500 text-sm laptop:text-lg bg-transparent;
+
+        &:focus + .textarea-label {
+
+            &::before {
+                @apply border-l-2 border-r-2 border-t-2 rounded-md;
+            }
+
+            span {
+                
+            }
+        }
+    }
+
+    .textarea-label{
+        position: absolute;
+        z-index: -10;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+        border-radius: 0.5rem;
+
+        &::before{
+            @apply content-[''] w-full absolute inset-0 border-2 border-t-0 border-r-0 border-l-0 border-gray-500 transition-all duration-300;
+        }
+
+        span {
+            @apply block py-2 px-1 text-gray-400 text-sm laptop:text-base uppercase font-semibold transition-all duration-300;
+          
+        }
+    }
+
+}

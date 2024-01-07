@@ -4,7 +4,7 @@ import { ContainerComponent } from '../../components/container/container.compone
 import { StepButtonComponent } from '../../components/step-button/step-button.component';
 import { MyInputComponent } from '../../components/forms/my-input/my-input.component';
 import { MyTextareaComponent } from '../../components/forms/my-textarea/my-textarea.component';
-
+//OK
 @Component({
   selector: 'app-primeiro-passo',
   standalone: true,

@@ -1,0 +1,11 @@
+:host{
+    width: fit-content;
+    height: fit-content;
+}
+.step-button {
+    @apply w-7 h-7 rounded-[50%] bg-[#D9D9D9] border-white;
+
+    &.active {
+        @apply bg-black ;
+    }
+}

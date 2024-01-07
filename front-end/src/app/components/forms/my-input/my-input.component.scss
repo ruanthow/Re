@@ -1,0 +1,58 @@
+:host {
+    @apply relative overflow-hidden inline-block w-full;
+
+    input {
+        @apply py-3 mt-4 w-full h-full bg-transparent block border-none outline-none font-semibold text-gray-500  text-sm laptop:text-lg;
+    }
+
+    input:not(:placeholder-shown) + .input-label {
+
+        & span{
+
+            @apply translate-y-[-30px];
+
+        }
+
+        &::before {
+            @apply translate-x-full;
+        }
+      
+       
+    }
+
+    input:focus + .input-label{
+        &::before{
+            @apply translate-x-full;
+        }
+        
+
+        span {
+            @apply translate-y-[-30px];
+        }
+        
+    }
+
+
+    .input-label {
+
+        @apply absolute w-full left-0 bottom-0 inline-block -z-10;
+
+        &::after {
+
+            @apply content-[''] w-full absolute inset-0 border-b-2 border-gray-500 transition-all duration-300;
+        
+        }
+        
+        &::before {
+
+            @apply content-[''] w-full z-10 absolute inset-0 -left-full border-b-2 border-blue-400 transition-all duration-300;
+        
+        }
+        
+        span {
+            @apply block py-3 text-gray-400 uppercase font-semibold text-sm transition-all duration-300;
+          
+        }
+    }
+
+}
